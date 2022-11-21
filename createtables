@@ -1,0 +1,85 @@
+CREATE DATABASE gruppe7
+
+CREATE TABLE customers (
+	cus_id int NOT NULL,
+	cus_firstname VARCHAR(255),
+	cus_surname VARCHAR(255),
+	cus_email VARCHAR(255),
+	cus_street VARCHAR(255),
+	cus_streetno VARCHAR(255),
+	cus_age VARCHAR(255),
+	cus_areacode int,
+	cus_city VARCHAR(255),
+	cus_age VARCHAR(255),
+	PRIMARY KEY (cus_id),
+	FOREIGN KEY (cus_areacode) REFERENCES areacode(areacode)
+);
+
+
+CREATE TABLE employees (
+	emp_id int NOT NULL,
+	emp_firstname VARCHAR(255),
+	emp_surname VARCHAR(255),
+	emp_phone int,
+	emp_email VARCHAR(255),
+	emp_street VARCHAR(255),
+	emp_streetno VARCHAR(255),
+	emp_areacode int,
+	emp_age VARCHAR(255),
+	PRIMARY KEY (emp_id),
+	FOREIGN KEY (emp_areacode) REFERENCES areacode(areacode)
+);
+
+CREATE TABLE suppliers (
+	supp_cvr int NOT NULL,
+	supp_name VARCHAR(255),
+	supp_phone int,
+	supp_contact int,
+	supp_email VARCHAR(255),
+	supp_street VARCHAR(255),
+	supp_streetno VARCHAR(255),	
+	supp_areacode int,
+	PRIMARY KEY (supp_cvr),
+	FOREIGN KEY (supp_areacode) REFERENCES areacode(areacode)
+);
+
+CREATE TABLE items (
+	item_id int NOT NULL,
+	item_name int,
+	item_color VARCHAR(255),
+	item_price int,
+	item_brand VARCHAR(255),
+	item_size VARCHAR(255),
+	item_gender VARCHAR(255),
+	item_type VARCHAR(255),
+	PRIMARY KEY (item_id)
+);
+
+CREATE TABLE orderlist (
+	order_id int NOT NULL AUTO_INCREMENT,
+	item_name int,
+	services int,
+	quantity int, 
+	price int, 
+	cus_id int, 
+	PRIMARY KEY (order_id),
+	FOREIGN KEY (order_id) REFERENCES items(item_id)
+);
+
+CREATE TABLE areacode (
+	areacode int NOT NULL,
+	city VARCHAR(255),
+	PRIMARY KEY (areacode)
+);
+
+CREATE TABLE order (
+	order_id int NOT NULL AUTO_INCREMENT,
+	order_day int NOT NULL,
+	order_month int NOT NULL,
+	order_year int,
+	cus_id int,
+	price int,
+	FOREIGN KEY (cus_id) REFERENCES customers(cus_id),
+	FOREIGN KEY (order_id) REFERENCES order(order_id),
+	--CONSTRAINT PK_ordre PRIMARY KEY (Ordrenummer,Linjenummer)
+);
