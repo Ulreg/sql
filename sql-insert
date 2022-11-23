@@ -35,3 +35,7 @@ VALUES (‘902’, ‘Hanne Eriksen’, ‘Platanvej’, ‘33’, ‘42’, ‘
 INSERT INTO orders (order_id, order_day, order_month, order_year, cus_id, price) VALUES (‘1001’, ‘7’, ‘11’, ‘2022’, ‘901’, ‘750’);
 INSERT INTO orders (order_id, order_day, order_month, order_year, cus_id, price) VALUES (‘1002’, ‘3’, ‘10’, ‘2022’, ‘902’, ‘750’);
 INSERT INTO orders (order_id, order_day, order_month, order_year, cus_id, price) VALUES (‘1003’, ‘23’, ‘25’, ‘2022’, ‘903’, ‘750’);
+
+--ORDERLIST:
+--INSERT INTO orderlist (orderlist_id, item_id, item_name, quantity, price, cus_id);
+
