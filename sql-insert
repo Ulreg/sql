@@ -1,3 +1,4 @@
+--AREACODE:
 INSERT INTO `areacode` (`areacode`, `city`) VALUES ('4600', 'Køge');
 INSERT INTO `areacode` (`areacode`, `city`) VALUES ('4000', 'Roskilde');
 INSERT INTO `areacode` (`areacode`, `city`) VALUES ('2600', 'Glostrup');
@@ -9,3 +10,28 @@ INSERT INTO `areacode` (`areacode`, `city`) VALUES ('5000', 'Odense');
 INSERT INTO `areacode` (`areacode`, `city`) VALUES ('7990', 'Øster Assels');
 INSERT INTO `areacode` (`areacode`, `city`) VALUES ('2200', 'København N');
 INSERT INTO `areacode` (`areacode`, `city`) VALUES ('6970', 'Christiansfeld');
+
+--ITEMS: 
+INSERT INTO items (item_id, item_name, item_color, item_price, item_brand, item_size, item_gender, item_type) VALUES (‘10’, ‘lapning af forhjul’, ‘null’, ‘50’, ‘null’, ‘null’, ‘null’, ‘null’); 
+INSERT INTO ‘items’ (‘item_id’, ‘item_name, ‘item_color’, ‘item_price’, ‘item_brand’, ‘item_size’, ‘item_gender’, ‘item_type’) 
+VALUES (‘11’, ‘lapning af baghjul’, ‘null’, ‘150’, ‘null’, ‘null’, ‘null’, ‘null’); 
+INSERT INTO ‘items’ (‘item_id’, ‘item_name, ‘item_color’, ‘item_price’, ‘item_brand’, ‘item_size’, ‘item_gender’, ‘item_type’) VALUES (‘10’, ‘eftersyn’, ‘null’, ‘150’, ‘null’, ‘null’, ‘null’, ‘null’); 
+
+--SUPPLIERS:
+INSERT INTO suppliers (supp_cvr, supp_name, supp_street, supp_streetno, supp_phone, supp_email, supp_contact, supp_areacode,  supp_city) VALUES (‘33982998’, ‘Dansk Cykel Import’, ‘stortvej’, ‘2’, ‘55445566’, ‘frank@danskcykel.dk’, ‘Frank Micky’, ‘5000’, ‘Odense’); INSERT INTO suppliers (supp_cvr, supp_name, supp_street, supp_streetno, supp_phone, supp_email, supp_contact, supp_areacode,  supp_city) VALUES (‘29889982’, ‘HC Import’, ‘Industrivej’, ‘23’, ‘44556677’, ‘jeff@hc.dk’, ‘Jeff Stolpe’, ‘7990’, ‘Øster Assels’); INSERT INTO suppliers (supp_cvr, supp_name, supp_street, supp_streetno, supp_phone, supp_email, supp_contact, supp_areacode,  supp_city) 
+VALUES (‘97823789’, ‘Cykelmyggen Import’, ‘Havnegade’, ‘54’, ‘Cykelmyggen Import’, ‘cykelkontakt@hotel.dk’, ‘Hans Hansen-Madsen’, 2200, ‘København N’);
+
+--EMPLOYEES:
+INSERT INTO employees (emp_id, emp_firstname, emp_surname, emp_streetname, emp_streetno, emp_areacode, emp_city, emp_email, emp_phone, emp_age) VALUES ('1347838348', 'Mads', 'Kulsbjerg', 'Nyvej', '234', '4780', 'Stege', 'crackopen@gmail.com', '28266644', '34'); 
+INSERT INTO employees (emp_id, emp_firstname, emp_surname, emp_streetname, emp_streetno, emp_areacode, emp_city, emp_email, emp_phone, emp_age) VALUES ('1568574845', 'Klaus', 'Antonsen', 'Storegade', '23', '4600', 'Køge', 'mussefar@ofir.dk', '47677889', '54'); 
+INSERT INTO employees (emp_id, emp_firstname, emp_surname, emp_streetname, emp_streetno, emp_areacode, emp_city, emp_email, emp_phone, emp_age) VALUES ('1847548484', 'Rene', 'Christensen', 'Udsigten', '2', '4760', 'Vordingborg', 'zorodog@krank.dk', '20919900', '38');
+
+--CUSTOMERS:
+INSERT INTO customers (cus_id, cus_firstname, cus_surname, cus_street, cus_streetno, cus_age, cus_phone, cus_email, cus_areacode, cus_city) 
+VALUES (‘901’, ‘Jørgen Hansen’, ‘Møllevej’, ‘8’, ‘50’, ‘55448399’, ‘daddyonfire@ofir.dk’, ‘4600’, ‘Køge’); INSERT INTO customers (cus_id, cus_firstname, cus_surname, cus_street, cus_streetno, cus_age, cus_phone, cus_email, cus_areacode, cus_city) 
+VALUES (‘902’, ‘Hanne Eriksen’, ‘Platanvej’, ‘33’, ‘42’, ‘22397599’, ‘sluttyandhorney@hotmail.com’, ‘4000’, ‘Roskilde’); INSERT INTO customers (cus_id, cus_firstname, cus_surname, cus_street, cus_streetno, cus_age, cus_phone, cus_email, cus_areacode, cus_city); VALUES (‘903’, ‘Emi’, ‘Sundbjerg’, ‘Haveparken’, ‘4’, ‘22’, ‘29903902’, ‘simpcrack@gmail.com’, ‘2600´, ‘Glostrup’);
+
+--ORDERS:
+INSERT INTO orders (order_id, order_day, order_month, order_year, cus_id, price) VALUES (‘1001’, ‘7’, ‘11’, ‘2022’, ‘901’, ‘750’);
+INSERT INTO orders (order_id, order_day, order_month, order_year, cus_id, price) VALUES (‘1002’, ‘3’, ‘10’, ‘2022’, ‘902’, ‘750’);
+INSERT INTO orders (order_id, order_day, order_month, order_year, cus_id, price) VALUES (‘1003’, ‘23’, ‘25’, ‘2022’, ‘903’, ‘750’);
