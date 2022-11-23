@@ -1,0 +1,11 @@
+INSERT INTO `areacode` (`areacode`, `city`) VALUES ('4600', 'Køge');
+INSERT INTO `areacode` (`areacode`, `city`) VALUES ('4000', 'Roskilde');
+INSERT INTO `areacode` (`areacode`, `city`) VALUES ('2600', 'Glostrup');
+INSERT INTO `areacode` (`areacode`, `city`) VALUES ('4780', 'Stege');
+INSERT INTO `areacode` (`areacode`, `city`) VALUES ('4760', 'Vordingborg');
+INSERT INTO `areacode` (`areacode`, `city`) VALUES ('4770', 'Bogø By');
+INSERT INTO `areacode` (`areacode`, `city`) VALUES ('4560', 'Vig');
+INSERT INTO `areacode` (`areacode`, `city`) VALUES ('5000', 'Odense');
+INSERT INTO `areacode` (`areacode`, `city`) VALUES ('7990', 'Øster Assels');
+INSERT INTO `areacode` (`areacode`, `city`) VALUES ('2200', 'København N');
+INSERT INTO `areacode` (`areacode`, `city`) VALUES ('6970', 'Christiansfeld');
