@@ -8,7 +8,7 @@ CREATE TABLE customers (
 	cus_street VARCHAR(255),
 	cus_streetno VARCHAR(255),
 	cus_age VARCHAR(255),
-	cus_areacode int,
+	areacode int,
 	cus_city VARCHAR(255),
 	cus_age VARCHAR(255),
 	PRIMARY KEY (cus_id),
@@ -24,7 +24,7 @@ CREATE TABLE employees (
 	emp_email VARCHAR(255),
 	emp_street VARCHAR(255),
 	emp_streetno VARCHAR(255),
-	emp_areacode int,
+	areacode int,
 	emp_age VARCHAR(255),
 	PRIMARY KEY (emp_id),
 	FOREIGN KEY (emp_areacode) REFERENCES areacode(areacode)
@@ -38,7 +38,7 @@ CREATE TABLE suppliers (
 	supp_email VARCHAR(255),
 	supp_street VARCHAR(255),
 	supp_streetno VARCHAR(255),	
-	supp_areacode int,
+	areacode int,
 	PRIMARY KEY (supp_cvr),
 	FOREIGN KEY (supp_areacode) REFERENCES areacode(areacode)
 );
@@ -72,7 +72,7 @@ CREATE TABLE areacode (
 	PRIMARY KEY (areacode)
 );
 
-CREATE TABLE order (
+CREATE TABLE orders (
 	order_id int NOT NULL AUTO_INCREMENT,
 	order_day int NOT NULL,
 	order_month int NOT NULL,
