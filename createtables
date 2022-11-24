@@ -79,7 +79,7 @@ CREATE TABLE orders (
 	order_year int,
 	cus_id int,
 	price int,
+	PRIMARY KEY (order_id)
 	FOREIGN KEY (cus_id) REFERENCES customers(cus_id),
-	FOREIGN KEY (order_id) REFERENCES order(order_id),
-	--CONSTRAINT PK_ordre PRIMARY KEY (Ordrenummer,Linjenummer)
+
 );
