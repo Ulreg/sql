@@ -12,7 +12,7 @@ CREATE TABLE customers (
 	cus_city VARCHAR(255),
 	cus_age VARCHAR(255),
 	PRIMARY KEY (cus_id),
-	FOREIGN KEY (cus_areacode) REFERENCES areacode(areacode)
+	FOREIGN KEY (areacode) REFERENCES areacode(areacode)
 );
 
 
@@ -27,7 +27,7 @@ CREATE TABLE employees (
 	areacode int,
 	emp_age VARCHAR(255),
 	PRIMARY KEY (emp_id),
-	FOREIGN KEY (emp_areacode) REFERENCES areacode(areacode)
+	FOREIGN KEY (areacode) REFERENCES areacode(areacode)
 );
 
 CREATE TABLE suppliers (
@@ -40,7 +40,7 @@ CREATE TABLE suppliers (
 	supp_streetno VARCHAR(255),	
 	areacode int,
 	PRIMARY KEY (supp_cvr),
-	FOREIGN KEY (supp_areacode) REFERENCES areacode(areacode)
+	FOREIGN KEY (areacode) REFERENCES areacode(areacode)
 );
 
 CREATE TABLE items (
